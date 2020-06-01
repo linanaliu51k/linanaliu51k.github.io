@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js深浅拷贝 | 技术分享</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.6c495ada.css" as="style"><link rel="preload" href="/assets/js/app.a5f12e3f.js" as="script"><link rel="preload" href="/assets/js/2.012767ec.js" as="script"><link rel="preload" href="/assets/js/28.dc59e70d.js" as="script"><link rel="prefetch" href="/assets/js/10.11845e8d.js"><link rel="prefetch" href="/assets/js/11.cda97d54.js"><link rel="prefetch" href="/assets/js/12.26a5fa04.js"><link rel="prefetch" href="/assets/js/13.e5412671.js"><link rel="prefetch" href="/assets/js/14.ce9d5328.js"><link rel="prefetch" href="/assets/js/15.36883b01.js"><link rel="prefetch" href="/assets/js/16.eab308d6.js"><link rel="prefetch" href="/assets/js/17.1bedb10d.js"><link rel="prefetch" href="/assets/js/18.86655160.js"><link rel="prefetch" href="/assets/js/19.3c121154.js"><link rel="prefetch" href="/assets/js/20.66014292.js"><link rel="prefetch" href="/assets/js/21.9b704246.js"><link rel="prefetch" href="/assets/js/22.79fb5d61.js"><link rel="prefetch" href="/assets/js/23.dd836561.js"><link rel="prefetch" href="/assets/js/24.b2cb9a0e.js"><link rel="prefetch" href="/assets/js/25.7ded2382.js"><link rel="prefetch" href="/assets/js/26.a858d3c2.js"><link rel="prefetch" href="/assets/js/27.6554e35b.js"><link rel="prefetch" href="/assets/js/29.8ae6ac0b.js"><link rel="prefetch" href="/assets/js/3.91688b6b.js"><link rel="prefetch" href="/assets/js/30.158b3697.js"><link rel="prefetch" href="/assets/js/31.2617bdab.js"><link rel="prefetch" href="/assets/js/32.12fd8296.js"><link rel="prefetch" href="/assets/js/33.1fb3a562.js"><link rel="prefetch" href="/assets/js/34.861e72c8.js"><link rel="prefetch" href="/assets/js/35.9656c028.js"><link rel="prefetch" href="/assets/js/36.a8eff3ec.js"><link rel="prefetch" href="/assets/js/37.09f7437c.js"><link rel="prefetch" href="/assets/js/38.0bd7aae9.js"><link rel="prefetch" href="/assets/js/39.c309197e.js"><link rel="prefetch" href="/assets/js/4.c85e84b2.js"><link rel="prefetch" href="/assets/js/40.78f76cb0.js"><link rel="prefetch" href="/assets/js/41.fd73aeb6.js"><link rel="prefetch" href="/assets/js/42.adcd28da.js"><link rel="prefetch" href="/assets/js/43.dad3d073.js"><link rel="prefetch" href="/assets/js/44.5ee75599.js"><link rel="prefetch" href="/assets/js/45.2c4ca62f.js"><link rel="prefetch" href="/assets/js/46.5cd263f5.js"><link rel="prefetch" href="/assets/js/47.e48a9193.js"><link rel="prefetch" href="/assets/js/5.0e5ac005.js"><link rel="prefetch" href="/assets/js/6.c4a7d53e.js"><link rel="prefetch" href="/assets/js/7.dbe0e90b.js"><link rel="prefetch" href="/assets/js/8.880eb801.js"><link rel="prefetch" href="/assets/js/9.5c5f6e8b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6c495ada.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">技术分享</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">技术分享这件小事</a><ul class="sidebar-sub-headers"></ul></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>js</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/jsFunction.html" class="sidebar-link">js 高级技巧</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/domEvent.html" class="sidebar-link">理解dom事件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/domEvent.html#dom事件简介" class="sidebar-link">DOM事件简介</a></li><li class="sidebar-sub-header"><a href="/js/domEvent.html#dom事件模型" class="sidebar-link">DOM事件模型</a></li><li class="sidebar-sub-header"><a href="/js/domEvent.html#dom事件绑定" class="sidebar-link">DOM事件绑定</a></li><li class="sidebar-sub-header"><a href="/js/domEvent.html#dom事件的传播" class="sidebar-link">DOM事件的传播</a></li></ul></li><li><a href="/js/domEventPatch.html" class="sidebar-link">封装通用事件绑定函数</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/delayLoad.html" class="sidebar-link">js延迟加载</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/copy.html" class="active sidebar-link">js深浅拷贝</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/throttle.html" class="sidebar-link">js节流</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/throttle.html#函数防抖-debounce" class="sidebar-link">函数防抖(debounce)</a></li><li class="sidebar-sub-header"><a href="/js/throttle.html#函数节流-throttle" class="sidebar-link">函数节流(throttle)</a></li></ul></li><li><a href="/js/curry.html" class="sidebar-link">函数柯里化</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/eventLoop.html" class="sidebar-link">理解浏览器的event loop</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/context.html" class="sidebar-link">Js的执行上下文和执行栈</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/this.html" class="sidebar-link">Js的this关键字</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/stricMode.html" class="sidebar-link">理解严格模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/prototype.html" class="sidebar-link">理解js原型链</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/js/inherit.html" class="sidebar-link">理解js继承</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>common</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>design</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="js深浅拷贝"><a href="#js深浅拷贝" aria-hidden="true" class="header-anchor">#</a> js深浅拷贝</h1> <p><code>2020-04-15 周三</code></p> <blockquote><p>学习计划开始<code>第十二天</code>，今天的目标是理解js深浅拷贝。</p></blockquote> <h3 id="深拷贝与浅拷贝"><a href="#深拷贝与浅拷贝" aria-hidden="true" class="header-anchor">#</a> 深拷贝与浅拷贝</h3> <blockquote><p>深复制和浅复制只针对像 Object, Array 这样的复杂对象的。简单来说，浅复制只复制一层对象的属性，而深复制则递归复制了所有层级。浅复制只会将对象的各个属性进行依次复制，并不会进行递归复制，深复制则不同，它不仅将原对象的各个属性逐个复制出去，而且将原对象各个属性所包含的对象也依次采用深复制的方法递归复制到新对象上</p></blockquote> <ul><li>浅拷贝：将原对象或原数组的引用直接赋给新对象/数组，新对象／数组只是原对象的一个引用</li> <li>深拷贝：创建一个新的对象和数组，将原对象的各项属性的“值”拷贝过来，是“值”而不是“引用”</li></ul> <p><code>使用目的</code>: 我们希望在改变新的数组（对象）的时候，不改变原数组（对象）</p> <p><code>要求程度</code>: 是仅“深”拷贝第一层级的对象属性或数组元素，还是递归拷贝所有层级的对象属性和数组元素</p> <p><code>验证是否成功</code>: 改变任意一个新对象/数组中的属性/元素, 都不改变原对象/数组.</p> <h3 id="浅拷贝实现"><a href="#浅拷贝实现" aria-hidden="true" class="header-anchor">#</a> 浅拷贝实现</h3> <ul><li>Object.assign方法 / ES6扩展运算符</li> <li>数组的slice, concat方法。</li> <li>jQuery中的$.extend({}, obj)</li> <li>Underscore中的_.clone()</li> <li>lodash中的_.clone()</li> <li>自己实现个简单的</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">shallowCopy</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 只拷贝对象</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> obj <span class="token operator">!==</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token comment">// 根据obj的类型判断是新建一个数组还是对象</span>
+  <span class="token keyword">var</span> newObj <span class="token operator">=</span> obj <span class="token keyword">instanceof</span> <span class="token class-name">Array</span> <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">// 遍历obj，并且判断是obj的属性才拷贝</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>obj<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        newObj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> newObj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="深拷贝实现"><a href="#深拷贝实现" aria-hidden="true" class="header-anchor">#</a> 深拷贝实现</h3> <ul><li>借助 JSON 全局对象(JSON.stringify/JSON.parse)</li></ul> <blockquote><p><code>注意</code>: 针对纯 JSON 数据对象的深复制, 它能正确处理的对象只有 Number, String, Boolean, Array, 扁平对象，即那些能够被json直接表示的数据结构。
+<img src="/images/deepcopy1.png" width="80%"></p></blockquote> <ul><li>jQuery的$.extend(true, {}, obj)</li></ul> <blockquote><p>不能深复制存在环的对象，不支持对Date, RegExp的深复制支持，不支持对ES6新引入的标准对象的深复制支持。<a href="https://github.com/jquery/jquery/blob/1472290917f17af05e98007136096784f9051fab/src/core.js#L121" target="_blank" rel="noopener noreferrer">源码<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <ul><li>lodash中的_.cloneDeep()</li></ul> <blockquote><p>能够深复制存在环的对象，支持对Date, RegExp的深复制支持，支持对ES6新引入的标准对象的深复制支持。</p></blockquote> <ul><li>他人写的一个深拷贝 <a href="https://github.com/cherryjs/cherry.js" target="_blank" rel="noopener noreferrer">Cherry.js<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <blockquote><p>能够深复制存在环的对象，支持对Date, RegExp的深复制支持。</p></blockquote> <ul><li>摘自他人实现</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 简单版深拷贝实现</span>
+<span class="token keyword">var</span> <span class="token function-variable function">deepCopy</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> obj <span class="token operator">!==</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> newObj <span class="token operator">=</span> obj <span class="token keyword">instanceof</span> <span class="token class-name">Array</span> <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>obj<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        newObj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">typeof</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">?</span> <span class="token function">deepCopy</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> newObj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>类型判断的参考</code>: <a href="https://github.com/mqyqingfeng/Blog/issues/28" target="_blank" rel="noopener noreferrer">类型判断上<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <a href="https://github.com/mqyqingfeng/Blog/issues/30" target="_blank" rel="noopener noreferrer">类型判断下<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> class2type <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> toString <span class="token operator">=</span> class2type<span class="token punctuation">.</span>toString<span class="token punctuation">;</span>
+<span class="token keyword">var</span> hasOwn <span class="token operator">=</span> class2type<span class="token punctuation">.</span>hasOwnProperty<span class="token punctuation">;</span>
+
+<span class="token comment">// jQuery 3.0 版本</span>
+<span class="token comment">// {} 和 new Object创建 和 没有原型的对象 是纯粹的对象</span>
+<span class="token keyword">function</span> <span class="token function">isPlainObject</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> proto<span class="token punctuation">,</span> Ctor<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>obj <span class="token operator">||</span> <span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token string">&quot;[object Object]&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  proto <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 没有原型的对象是纯粹的</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>proto<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  Ctor <span class="token operator">=</span> <span class="token function">hasOwn</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>proto<span class="token punctuation">,</span> <span class="token string">&quot;constructor&quot;</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> proto<span class="token punctuation">.</span>constructor<span class="token punctuation">;</span>
+  <span class="token comment">// 在这里判断 Ctor 构造函数是不是 Object 构造函数，用于区分自定义构造函数和 Object 构造函数</span>
+  <span class="token comment">// hasOwn.toString 调用的其实是 Function.prototype.toString，Function 对象覆盖了从 Object 继承来的 Object.prototype.toString 方法。函数的 toString 方法会返回一个表示函数源代码的字符串。function Object() { [native code] }</span>
+  <span class="token keyword">return</span> <span class="token keyword">typeof</span> Ctor <span class="token operator">===</span> <span class="token string">&quot;function&quot;</span> <span class="token operator">&amp;&amp;</span> hasOwn<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>Ctor<span class="token punctuation">)</span> <span class="token operator">===</span> hasOwn<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>Object<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// jQuery的extend模拟。与jQuery的实现几乎一致。</span>
+<span class="token keyword">function</span> <span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 默认不进行深拷贝</span>
+  <span class="token keyword">var</span> deep <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> name<span class="token punctuation">,</span> options<span class="token punctuation">,</span> src<span class="token punctuation">,</span> copy<span class="token punctuation">,</span> clone<span class="token punctuation">,</span> copyIsArray<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> length <span class="token operator">=</span> arguments<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token comment">// 记录要复制的对象的下标</span>
+  <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token comment">// 第一个参数不传布尔值的情况下，target 默认是第一个参数</span>
+  <span class="token keyword">var</span> target <span class="token operator">=</span> arguments<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">// 如果第一个参数是布尔值，第二个参数是 target</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> target <span class="token operator">==</span> <span class="token string">'boolean'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    deep <span class="token operator">=</span> target<span class="token punctuation">;</span>
+    target <span class="token operator">=</span> arguments<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    i<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 如果target不是对象，我们是无法进行复制的，所以设为 {}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> target <span class="token operator">!==</span> <span class="token string">&quot;object&quot;</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">isFunction</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    target <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 循环遍历要复制的对象们</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取当前对象</span>
+    options <span class="token operator">=</span> arguments<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// 要求不能为空 避免 extend(a,,b) 这种情况</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>options <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span>name <span class="token keyword">in</span> options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 目标属性值</span>
+        src <span class="token operator">=</span> target<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// 要复制的对象的属性值</span>
+        copy <span class="token operator">=</span> options<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// 解决循环引用</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">===</span> copy<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 要递归的对象必须是 plainObject 或者 数组</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>deep <span class="token operator">&amp;&amp;</span> copy <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token function">isPlainObject</span><span class="token punctuation">(</span>copy<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>copyIsArray <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>copy<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 要复制的对象属性值类型需要与目标属性值相同</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>copyIsArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            copyIsArray <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            clone <span class="token operator">=</span> src <span class="token operator">&amp;&amp;</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>src<span class="token punctuation">)</span> <span class="token operator">?</span> src <span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            clone <span class="token operator">=</span> src <span class="token operator">&amp;&amp;</span> <span class="token function">isPlainObject</span><span class="token punctuation">(</span>src<span class="token punctuation">)</span> <span class="token operator">?</span> src <span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          target<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span>deep<span class="token punctuation">,</span> clone<span class="token punctuation">,</span> copy<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>copy <span class="token operator">!==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          target<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> copy<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code>  <span class="token comment">// var dst = extend(true, [4, 5, 6, 7, 8, 9], [1, 2, 3]);</span>
+  <span class="token comment">// console.log(dst) // [1, 2, 3, 7, 8, 9]</span>
+  <span class="token keyword">var</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    value<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token number">3</span><span class="token punctuation">:</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    value<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// var dst2 = extend(true, obj1, obj2)</span>
+  <span class="token comment">// console.log(dst2) // {value: [5,6,7]}</span>
+  <span class="token keyword">var</span> dst3 <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> obj2<span class="token punctuation">,</span> obj1<span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dst3<span class="token punctuation">)</span> <span class="token comment">// value: {3: 1}</span>
+</code></pre></div><html><script>
+  function extend1() {
+    var name, options, copy;
+    var length = arguments.length;
+    var i = 1;
+    var target = arguments[0];
+    for (; i &lt; length; i++) {
+      options = arguments[i]
+      if (options != null) {
+        for (name in options) {
+          copy = options[name];
+          &lt;!--  解决循环引用 --&gt;
+          if (target === copy) {
+            continue;
+          }
+          if (copy !== undefined){
+            target[name] = copy;
+          }
+        }
+      }
+    }
+    return target;
+  };
+  // var a = {name : b};
+  // var b = {name : a}
+  // var c = extend1(a, b);
+  // console.log(c)
+  var class2type = {};
+  var toString = class2type.toString;
+  var hasOwn = class2type.hasOwnProperty;
+  function isPlainObject(obj) {
+    var proto, Ctor;
+    if (!obj || toString.call(obj) !== &quot;[object Object]&quot;) {
+      return false;
+    }
+    proto = Object.getPrototypeOf(obj);
+    if (!proto) {
+      return true;
+    }
+    Ctor = hasOwn.call(proto, &quot;constructor&quot;) &amp;&amp; proto.constructor;
+    return typeof Ctor === &quot;function&quot; &amp;&amp; hasOwn.toString.call(Ctor) === hasOwn.toString.call(Object);
+  }
+  function extend() {
+    // 默认不进行深拷贝
+    var deep = false;
+    var name, options, src, copy, clone, copyIsArray;
+    var length = arguments.length;
+    // 记录要复制的对象的下标
+    var i = 1;
+    // 第一个参数不传布尔值的情况下，target 默认是第一个参数
+    var target = arguments[0] || {};
+    // 如果第一个参数是布尔值，第二个参数是 target
+    if (typeof target == 'boolean') {
+      deep = target;
+      target = arguments[i] || {};
+      i++;
+    }
+    // 循环遍历要复制的对象们
+    for (; i &lt; length; i++) {
+      // 获取当前对象
+      options = arguments[i];
+      // 要求不能为空 避免 extend(a,,b) 这种情况
+      if (options != null) {
+        for (name in options) {
+          // 目标属性值
+          src = target[name];
+          // 要复制的对象的属性值
+          copy = options[name];
+          // 解决循环引用
+          if (target === copy) {
+            continue;
+          }
+          // 要递归的对象必须是 plainObject 或者数组
+          if (deep &amp;&amp; copy &amp;&amp; (isPlainObject(copy) || (copyIsArray = Array.isArray(copy)))) {
+            // 要复制的对象属性值类型需要与目标属性值相同
+            if (copyIsArray) {
+              copyIsArray = false;
+              clone = src &amp;&amp; Array.isArray(src) ? src : [];
+            } else {
+              clone = src &amp;&amp; isPlainObject(src) ? src : {};
+            }
+            target[name] = extend(deep, clone, copy);
+          } else if (copy !== undefined) {
+            target[name] = copy;
+          }
+        }
+      }
+    }
+    return target;
+  };
+  // var dst = extend(true, [4, 5, 6, 7, 8, 9], [1, 2, 3]);
+  // console.log(dst) // [1, 2, 3, 7, 8, 9]
+  var obj1 = {
+    value: {
+      3: 1
+    }
+  }
+  var obj2 = {
+    value: [5, 6, 7],
+  }
+  // var dst2 = extend(true, obj1, obj2)
+  // console.log(dst2) // {value: [5,6,7]}
+  var dst3 = extend(true, obj2, obj1)
+  console.log(dst3) // value: {3: 1}
+  </script></html> <h4 id="参考"><a href="#参考" aria-hidden="true" class="header-anchor">#</a> 参考</h4> <ul><li><a href="https://github.com/mqyqingfeng/Blog/issues/32" target="_blank" rel="noopener noreferrer">JavaScript专题之深浅拷贝<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/mqyqingfeng/Blog/issues/33" target="_blank" rel="noopener noreferrer">从零实现jQuery的extend<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://jerryzou.com/posts/dive-into-deep-clone-in-javascript/" target="_blank" rel="noopener noreferrer">深入剖析JavaScript的深复制<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/wengjq/Blog/issues/3" target="_blank" rel="noopener noreferrer">javaScript中浅拷贝和深拷贝的实现<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://www.zhihu.com/question/23031215" target="_blank" rel="noopener noreferrer">深拷贝和浅拷贝知乎问答<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://www.cnblogs.com/penghuwan/p/7359026.html" target="_blank" rel="noopener noreferrer">详解javaScript的深拷贝<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/js/delayLoad.html" class="prev">
+          js延迟加载
+        </a></span> <span class="next"><a href="/js/throttle.html">
+          js节流
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a5f12e3f.js" defer></script><script src="/assets/js/2.012767ec.js" defer></script><script src="/assets/js/28.dc59e70d.js" defer></script>
+  </body>
+</html>

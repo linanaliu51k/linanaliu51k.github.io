@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>css层叠优先级(cascade) | 技术分享</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.6c495ada.css" as="style"><link rel="preload" href="/assets/js/app.a5f12e3f.js" as="script"><link rel="preload" href="/assets/js/2.012767ec.js" as="script"><link rel="preload" href="/assets/js/8.880eb801.js" as="script"><link rel="prefetch" href="/assets/js/10.11845e8d.js"><link rel="prefetch" href="/assets/js/11.cda97d54.js"><link rel="prefetch" href="/assets/js/12.26a5fa04.js"><link rel="prefetch" href="/assets/js/13.e5412671.js"><link rel="prefetch" href="/assets/js/14.ce9d5328.js"><link rel="prefetch" href="/assets/js/15.36883b01.js"><link rel="prefetch" href="/assets/js/16.eab308d6.js"><link rel="prefetch" href="/assets/js/17.1bedb10d.js"><link rel="prefetch" href="/assets/js/18.86655160.js"><link rel="prefetch" href="/assets/js/19.3c121154.js"><link rel="prefetch" href="/assets/js/20.66014292.js"><link rel="prefetch" href="/assets/js/21.9b704246.js"><link rel="prefetch" href="/assets/js/22.79fb5d61.js"><link rel="prefetch" href="/assets/js/23.dd836561.js"><link rel="prefetch" href="/assets/js/24.b2cb9a0e.js"><link rel="prefetch" href="/assets/js/25.7ded2382.js"><link rel="prefetch" href="/assets/js/26.a858d3c2.js"><link rel="prefetch" href="/assets/js/27.6554e35b.js"><link rel="prefetch" href="/assets/js/28.dc59e70d.js"><link rel="prefetch" href="/assets/js/29.8ae6ac0b.js"><link rel="prefetch" href="/assets/js/3.91688b6b.js"><link rel="prefetch" href="/assets/js/30.158b3697.js"><link rel="prefetch" href="/assets/js/31.2617bdab.js"><link rel="prefetch" href="/assets/js/32.12fd8296.js"><link rel="prefetch" href="/assets/js/33.1fb3a562.js"><link rel="prefetch" href="/assets/js/34.861e72c8.js"><link rel="prefetch" href="/assets/js/35.9656c028.js"><link rel="prefetch" href="/assets/js/36.a8eff3ec.js"><link rel="prefetch" href="/assets/js/37.09f7437c.js"><link rel="prefetch" href="/assets/js/38.0bd7aae9.js"><link rel="prefetch" href="/assets/js/39.c309197e.js"><link rel="prefetch" href="/assets/js/4.c85e84b2.js"><link rel="prefetch" href="/assets/js/40.78f76cb0.js"><link rel="prefetch" href="/assets/js/41.fd73aeb6.js"><link rel="prefetch" href="/assets/js/42.adcd28da.js"><link rel="prefetch" href="/assets/js/43.dad3d073.js"><link rel="prefetch" href="/assets/js/44.5ee75599.js"><link rel="prefetch" href="/assets/js/45.2c4ca62f.js"><link rel="prefetch" href="/assets/js/46.5cd263f5.js"><link rel="prefetch" href="/assets/js/47.e48a9193.js"><link rel="prefetch" href="/assets/js/5.0e5ac005.js"><link rel="prefetch" href="/assets/js/6.c4a7d53e.js"><link rel="prefetch" href="/assets/js/7.dbe0e90b.js"><link rel="prefetch" href="/assets/js/9.5c5f6e8b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6c495ada.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">技术分享</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">技术分享这件小事</a><ul class="sidebar-sub-headers"></ul></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>css</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/css/center.html" class="sidebar-link">css居中调研</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/bfc.html" class="sidebar-link">bfc 学习</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/line-height.html" class="sidebar-link">理解 line-height</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/vertical-align.html" class="sidebar-link">vertical-align</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/stack-context.html" class="sidebar-link">层叠上下文</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/margin.html" class="sidebar-link">理解margin重叠</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/cascade.html" class="active sidebar-link">css层叠优先级(cascade)</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/background.html" class="sidebar-link">深入理解background</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>common</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>design</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="css层叠优先级-cascade"><a href="#css层叠优先级-cascade" aria-hidden="true" class="header-anchor">#</a> css层叠优先级(cascade)</h1> <blockquote><p>学习计划开始第七天，今天的目标是理解css层叠优先级。注意这个东西和前两天了解的css层叠不是一个概念。之前理解的层叠是层叠上下文相关的(stack context), 而这里要理解的是css里面的cascade这种层叠问题。</p></blockquote> <h3 id="什么是层叠"><a href="#什么是层叠" aria-hidden="true" class="header-anchor">#</a> 什么是层叠</h3> <blockquote><p>确定向一个元素应用哪些值时，用户代理不仅要考虑继承，还要考虑声明的特殊性，另外需要考虑声明本身的来源。这个过程就是层叠(cascade)。继承是从一个元素向其后代元素传递属性值所采用的机制。</p></blockquote> <h3 id="特殊性-specificity"><a href="#特殊性-specificity" aria-hidden="true" class="header-anchor">#</a> 特殊性(specificity)</h3> <blockquote><p>对于每个规则，用户代理会计算选择器的特殊性，并将这个特殊性附加到规则中的各个声明。如果一个元素有两个或多个冲突的属性声明，那么有最高特殊性的声明就会胜出。
+选择器的特殊性由选择器本身的组件确定。特殊性值表述为4个部分，如:0,0,0,0。一个选择器的具体特殊性如下确定:</p></blockquote> <ul><li>对于选择器中给定的各个ID属性值, 加 <code>0,1,0,0</code>。</li> <li>对于选择器中给定的各个类属性值、属性选择或伪类，加 <code>0,0,1,0</code>。</li> <li>对于选择器中给定的各个元素和伪元素，加<code>0,0,0,1</code>。关于伪元素是否具有特殊性，CSS2自相矛盾，但CSS2.1明确表示它们具有特殊性，而且特殊性为0,0,0,1。</li> <li>组合符和通配选择器对特殊性没有任何贡献。</li></ul> <p><code>如下示例, 在本例中，如果一个'em'元素同时与第二个和第五个规则匹配，则该元素将是褐红色的，因为第五个规则的特殊性超过第二个规则</code></p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* specificity = 0,0,0,1 */</span>
+<span class="token selector">p em</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> purple<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* specificity = 0,0,0,2 */</span>
+<span class="token selector">.grape</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> purple<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* specificity = 0,0,1,0 */</span>
+<span class="token selector">*.bright</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* specificity = 0,0,1,0 */</span>
+<span class="token selector">p.bright em.dark</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> maroon<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* specificity = 0,0,2,2 */</span>
+<span class="token selector">#id216</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* specificity = 0,1,0,0 */</span>
+<span class="token selector">div#sidebar *[href]</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> silver<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* specificity = 0,1,1,1 */</span>
+</code></pre></div><blockquote><p>这是因为值是从左到右排序的。1,0,0,0的特殊性胜过任何以“0”开头的特殊性，不管其他数字是什么。所以0,1,0,1胜过0,0,1,7因为第一个值的第二个位置的1击败了第二个值的第二个位置的0 。</p></blockquote> <h4 id="声明和特殊性"><a href="#声明和特殊性" aria-hidden="true" class="header-anchor">#</a> 声明和特殊性</h4> <blockquote><p>一旦选择器的特殊性被确定，特殊性值将被赋给它的所有相关声明</p></blockquote> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> silver<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* 分组为单独的规则 */</span>
+<span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> silver<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>任何情况下，用户代理都会确定哪些规则与一个元素匹配，计算出所有相关声明及其特殊性，确定哪些规则胜出，然后将胜出的规则应用到元素，从而得到应用样式后的结果。每个元素、选择器和声明上都必须完成这些工作，用户代理会自动完成这些工作。</p></blockquote> <h4 id="通配选择器特殊性"><a href="#通配选择器特殊性" aria-hidden="true" class="header-anchor">#</a> 通配选择器特殊性</h4> <blockquote><p>对一个选择器的特殊性没有贡献，特殊性为0,0,0,0,这与根本没有特殊性有区别。</p></blockquote> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* div包含的段落将是黑色，而其他元素都是灰色 */</span>
+<span class="token selector">div p</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* 0,0,0,2 */</span>
+<span class="token selector">*</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* 0,0,0,0 */</span>
+
+div p <span class="token comment">/* 0,0,0,2 */</span>
+body * strong <span class="token comment">/* 0,0,0,2 */</span>
+</code></pre></div><p>组合符则根本没有特殊性，甚至连0特殊性都没有。对总特殊性没有任何影响。</p> <h4 id="内联样式特殊性"><a href="#内联样式特殊性" aria-hidden="true" class="header-anchor">#</a> 内联样式特殊性</h4> <blockquote><p>一般的第一个0是为内联样式声明保留的，它比其他声明的特殊性都高。</p></blockquote> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- 内联高于其他 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">h1</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>The Meadow Party<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><code>注意</code>:</p> <blockquote><p>此为css2.1新增。css2中特殊性包含3个值， 内联的特殊性为1,0,0与id选择器的特殊性相同，所以id选择器很容易覆盖内联样式。</p></blockquote> <h4 id="重要性"><a href="#重要性" aria-hidden="true" class="header-anchor">#</a> 重要性</h4> <blockquote><p>有时某个声明可能非常重要，超过了所有其他声明。css2.1称之为重要声明,允许在这些声明的结束分号之前插入!important来标志。每个声明都需要有自己的!important标志。必须正确的放置!important，否则声明将无效.总是放在声明的最后，分号前面。</p></blockquote> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">p.dark</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #333 <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> white <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">p.light</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+  <span class="token property">font</span><span class="token punctuation">:</span> smaller Times<span class="token punctuation">,</span> serif <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token comment">/* 放在其他位置，整条声明都失效 */</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>注意</code></p> <blockquote><p>标记为!important的声明并没有特殊的特殊性值，不过要与不重要的声明分开考虑。实际上，所有的!重要的声明被分组在一起，而具体的冲突在该组内相对解决。类似地，所有不重要的声明都放在一起考虑，不重要的组中的任何冲突都使用特殊性来解决。因此，在重要的和不重要的声明冲突的任何情况下，重要的声明“总是”获胜。</p></blockquote> <h3 id="继承"><a href="#继承" aria-hidden="true" class="header-anchor">#</a> 继承</h3> <blockquote><p>基于继承机制，样式不仅应用到指定的元素，还会应用到它的后代元素。通过查看文档的树形图，很容易看出继承是如何工作的。元素接受声明。然后，该值向下传播到树的后代元素，并继续下去，直到没有更多的后代继承该值。值“从不”向上传播;也就是说，元素从不将值传递给它的祖先。</p></blockquote> <p>一般不需要特别考虑，有几点需要注意:</p> <ul><li>大多数box-model属性——包括边距、填充、背景和边界不会继承。</li> <li>继承的值根本没有特殊性，甚至连0特殊性都没有。</li></ul> <p><code>0特殊性比无特殊性要强</code></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">*</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h1#page-title</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>page-title<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Meerkat <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>Central<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+  Welcome to the best place on the web for meerkat information!
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 用户代理可能会设置默认值 */</span>
+<span class="token selector">a:link</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">#toolbar</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* 向相关元素直接指定样式 */</span>
+<span class="token selector">#toolbar a:link</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="层叠"><a href="#层叠" aria-hidden="true" class="header-anchor">#</a> 层叠</h3> <blockquote><p>css让样式层叠在一起，通过结合继承和特殊性来做到。css2.1的层叠规则如下:
+<img src="/images/cascade1.png"></p></blockquote> <h4 id="按权重和来源排序"><a href="#按权重和来源排序" aria-hidden="true" class="header-anchor">#</a> 按权重和来源排序</h4> <p>根据第二条规则</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- 重要规则会胜出 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">p</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> gray <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Well, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>hello<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span> there!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- 考虑规则的来源 --&gt;</span>
+<span class="token comment">&lt;!-- 正常权重情况下，创作人员的样式优先于读者样式表的样式 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">p em</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* author's style sheet */</span>
+<span class="token selector">p em</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* reader's style sheet */</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- 都有!important情况下，读者样式表的样式优先于创作人员的样式 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">p em</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> black <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* author's style sheet */</span>
+<span class="token selector">p em</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> yellow <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* reader's style sheet */</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>在声明权重方面要考虑5级。权重由大到小的顺序依次为:</p> <ul><li>读者的重要声明</li> <li>创作人员的重要声明</li> <li>创作人员的正常声明</li> <li>读者的正常声明</li> <li>用户代理声明</li></ul> <p>通常需要考虑前四个，因为任何声明都会胜过用户代理样式。</p> <h4 id="按特殊性排序"><a href="#按特殊性排序" aria-hidden="true" class="header-anchor">#</a> 按特殊性排序</h4> <blockquote><p>根据第3条规则，如果向一个元素应用多个彼此冲突的声明，而且它们的权重相同，要按特殊性排序，最特殊的声明最优先。</p></blockquote> <h4 id="按顺序排序"><a href="#按顺序排序" aria-hidden="true" class="header-anchor">#</a> 按顺序排序</h4> <blockquote><p>根据第4条规则，如果两个规则的权重、来源和特殊性完全相同，那么在样式表中后出现的一个会胜出。</p></blockquote> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 后面胜出 */</span>
+<span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 文档中的样式表会在其他导入的后面，按顺序排序的话，文档样式胜出 */</span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token url">url(basic.css)</span><span class="token punctuation">;</span></span>
+<span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">p em</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> purple<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* from imported style sheet */</span>
+<span class="token selector">p em</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment">/* rule contained within the document */</span>
+
+</code></pre></div><p>一般建议链接样式声明的书写顺序为LVHA, 即link-visited-hover-active。因为他们的特殊性相同，要通过顺序来比较。不想考虑顺序的话，可以通过伪类组合来改变。</p> <div class="language-css extra-class"><pre class="language-css"><code>  <span class="token comment">/* 所有链接要么是已访问，要么是未访问的。 所以link,visited要在前，active时也会触发hover，所以active最后。*/</span>
+  <span class="token selector">:link</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">:visited</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">:hover</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">:active</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token comment">/* 不考虑顺序的话 */</span>
+  <span class="token selector">:link</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">:visited</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">:link:hover</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">:visted:hover</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">:link:hover:active</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token selector">:visted:hover:active</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre></div><p><a href="www.baidu.com" class="cascade-link">百度</a></p> <h3 id="非css表现提示"><a href="#非css表现提示" aria-hidden="true" class="header-anchor">#</a> 非css表现提示</h3> <blockquote><p>文档有可能包含非css的表现提示，例如font元素。非css提示被处理为特殊性为0。出现在创作人员样式表的最前面。用户代理不能将其覆盖，创作人员或读者样式会覆盖。</p></blockquote> <h4 id="参考"><a href="#参考" aria-hidden="true" class="header-anchor">#</a> 参考</h4> <ul><li>css权威指南</li> <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Cascade" target="_blank" rel="noopener noreferrer">CSS层叠<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance" target="_blank" rel="noopener noreferrer">Cascade and inheritance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/css/margin.html" class="prev">
+          理解margin重叠
+        </a></span> <span class="next"><a href="/css/background.html">
+          深入理解background
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a5f12e3f.js" defer></script><script src="/assets/js/2.012767ec.js" defer></script><script src="/assets/js/8.880eb801.js" defer></script>
+  </body>
+</html>

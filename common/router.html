@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>研究前端路由 | 技术分享</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.6c495ada.css" as="style"><link rel="preload" href="/assets/js/app.a5f12e3f.js" as="script"><link rel="preload" href="/assets/js/2.012767ec.js" as="script"><link rel="preload" href="/assets/js/15.36883b01.js" as="script"><link rel="prefetch" href="/assets/js/10.11845e8d.js"><link rel="prefetch" href="/assets/js/11.cda97d54.js"><link rel="prefetch" href="/assets/js/12.26a5fa04.js"><link rel="prefetch" href="/assets/js/13.e5412671.js"><link rel="prefetch" href="/assets/js/14.ce9d5328.js"><link rel="prefetch" href="/assets/js/16.eab308d6.js"><link rel="prefetch" href="/assets/js/17.1bedb10d.js"><link rel="prefetch" href="/assets/js/18.86655160.js"><link rel="prefetch" href="/assets/js/19.3c121154.js"><link rel="prefetch" href="/assets/js/20.66014292.js"><link rel="prefetch" href="/assets/js/21.9b704246.js"><link rel="prefetch" href="/assets/js/22.79fb5d61.js"><link rel="prefetch" href="/assets/js/23.dd836561.js"><link rel="prefetch" href="/assets/js/24.b2cb9a0e.js"><link rel="prefetch" href="/assets/js/25.7ded2382.js"><link rel="prefetch" href="/assets/js/26.a858d3c2.js"><link rel="prefetch" href="/assets/js/27.6554e35b.js"><link rel="prefetch" href="/assets/js/28.dc59e70d.js"><link rel="prefetch" href="/assets/js/29.8ae6ac0b.js"><link rel="prefetch" href="/assets/js/3.91688b6b.js"><link rel="prefetch" href="/assets/js/30.158b3697.js"><link rel="prefetch" href="/assets/js/31.2617bdab.js"><link rel="prefetch" href="/assets/js/32.12fd8296.js"><link rel="prefetch" href="/assets/js/33.1fb3a562.js"><link rel="prefetch" href="/assets/js/34.861e72c8.js"><link rel="prefetch" href="/assets/js/35.9656c028.js"><link rel="prefetch" href="/assets/js/36.a8eff3ec.js"><link rel="prefetch" href="/assets/js/37.09f7437c.js"><link rel="prefetch" href="/assets/js/38.0bd7aae9.js"><link rel="prefetch" href="/assets/js/39.c309197e.js"><link rel="prefetch" href="/assets/js/4.c85e84b2.js"><link rel="prefetch" href="/assets/js/40.78f76cb0.js"><link rel="prefetch" href="/assets/js/41.fd73aeb6.js"><link rel="prefetch" href="/assets/js/42.adcd28da.js"><link rel="prefetch" href="/assets/js/43.dad3d073.js"><link rel="prefetch" href="/assets/js/44.5ee75599.js"><link rel="prefetch" href="/assets/js/45.2c4ca62f.js"><link rel="prefetch" href="/assets/js/46.5cd263f5.js"><link rel="prefetch" href="/assets/js/47.e48a9193.js"><link rel="prefetch" href="/assets/js/5.0e5ac005.js"><link rel="prefetch" href="/assets/js/6.c4a7d53e.js"><link rel="prefetch" href="/assets/js/7.dbe0e90b.js"><link rel="prefetch" href="/assets/js/8.880eb801.js"><link rel="prefetch" href="/assets/js/9.5c5f6e8b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6c495ada.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">技术分享</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">技术分享这件小事</a><ul class="sidebar-sub-headers"></ul></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>common</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/common/browserCache.html" class="sidebar-link">理解浏览器缓存</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/common/cookie.html" class="sidebar-link">cookie 深入了解</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/common/router.html" class="active sidebar-link">研究前端路由</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>design</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="研究前端路由"><a href="#研究前端路由" aria-hidden="true" class="header-anchor">#</a> 研究前端路由</h1> <p><code>2020-05-06 周三</code></p> <p><code>2020-05-07 周四</code></p> <blockquote><p>学习计划开始<code>第二十三天</code>，今天的目标是研究前端路由。</p></blockquote> <h3 id="什么是前端路由"><a href="#什么是前端路由" aria-hidden="true" class="header-anchor">#</a> 什么是前端路由</h3> <blockquote><p>对于用户来说，路由就是浏览器地址栏中的url与所见网页的对应关系。而对于web开发人员来说，路由更像是url与处理函数的对应关系。</p></blockquote> <blockquote><p>传统的服务端路由，根据客户端请求的不同网址，返回不同的网页内容，这种情况一是会造成服务器压力增加，二是每次都重新请求，响应较慢、用户体验下降。于是，单页应用（spa,single page application）应运而生。在url地址改变的过程中，通过js来实现不同UI之间的切换（js对DOM的操作），而不再向服务器重新请求页面，只通过ajax向服务端请求数据，对用户来说这种无刷新的、即时响应是更好的体验。其中，根据url地址栏的变化而展示不同的UI，就是通过前端路由来实现的。目前主流的支持单页应用的前端框架，基本都有配套的或第三方的路由系统。</p></blockquote> <h3 id="基于hash-location-hash-hashchange事件"><a href="#基于hash-location-hash-hashchange事件" aria-hidden="true" class="header-anchor">#</a> 基于hash(location.hash+hashchange事件)</h3> <p>hash满足以下几个特性，才使得其可以实现前端路由：</p> <ul><li>url中hash值的变化并不会重新加载页面，因为hash是用来指导浏览器行为的，对服务端是无用的，所以不会包括在http请求中。</li> <li>hash值的改变，都会在浏览器的访问历史中增加一个记录，也就是能通过浏览器的回退、前进按钮控制hash的切换</li> <li>我们可以通过hashchange事件，监听到hash值的变化，从而响应不同路径的逻辑处理。</li></ul> <p>触发hash值的变化有2种方法:</p> <ul><li>一种是通过a标签，设置href属性，当标签点击之后，地址栏会改变，同时会触发hashchange事件</li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>#/page1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>page1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li>另一种是通过js直接赋值给location.hash，也会改变url，触发hashchange事件</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>location<span class="token punctuation">.</span>hash<span class="token operator">=</span><span class="token string">&quot;#/page1&quot;</span>
+</code></pre></div><p><code>简易Router</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>routes <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>currentUrl <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">Router</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">route</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">path<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>routes<span class="token punctuation">[</span>path<span class="token punctuation">]</span> <span class="token operator">=</span> callback <span class="token operator">||</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">Router</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">refresh</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>currentUrl <span class="token operator">=</span> location<span class="token punctuation">.</span>hash<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">'/'</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>routes<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>currentUrl<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">Router</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">init</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'load'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">refresh</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'hashchange'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">refresh</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+window<span class="token punctuation">.</span>Router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+window<span class="token punctuation">.</span>Router<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 添加路由规则</span>
+Router<span class="token punctuation">.</span><span class="token function">route</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 设置响应内容</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Router<span class="token punctuation">.</span><span class="token function">route</span><span class="token punctuation">(</span><span class="token string">'/blue'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 设置响应内容</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><code>示例</code></p> <html><ul><li><a href="#/">/</a></li> <li><a href="#/page1">page1</a></li> <li><a href="#/page2">page2</a></li></ul> <div class="content-div"></div> <button id="routerBack">back</button> <script>
+    if (typeof RouterClass === 'undefined') {
+      class RouterClass {
+        constructor() {
+          this.isBack = false
+          this.routes = {}      // 记录路径标识符对应的cb
+          this.currentUrl = ''  // 记录hash只为方便执行cb
+          this.historyStack = [] // hash栈
+          window.addEventListener('load', () =&gt; {
+            console.log('load')
+            this.render()
+          })
+          window.addEventListener('hashchange', () =&gt; {
+            // 浏览器回退也会执行这个方法
+            console.log('back')
+            this.render()
+          })
+        }
+        /* 初始化 */
+        static init() {
+          window.Router = new RouterClass()
+        }
+        /* 记录path对应cb */
+        route(path, cb) {
+          this.routes[path] = cb || function () {}
+        }
+        /* 入栈当前hash，执行cb */
+        render() {
+          if (this.isBack) {
+            this.isBack = false
+            return
+          }
+          this.currentUrl = location.hash.slice(1) || '/'
+          this.historyStack.push(this.currentUrl)
+          this.routes[this.currentUrl]()
+        }
+        /* 路由后退 */
+        back() {
+          this.isBack = true
+          this.historyStack.pop()  // 移除当前hash，回退到上一个
+          const { length } = this.historyStack
+          if (!length) return
+          const prev = this.historyStack[length - 1] // 拿到要回退到的目标hash
+          location.hash = `#${prev}`
+          this.currentUrl = prev
+          this.routes[prev]() // 执行对应cb
+        }
+      }
+       window.RouterClass = RouterClass
+    }
+    RouterClass.init()
+    const BtnDom = document.querySelector('#routerBack')
+    const ContentDom = document.querySelector('.content-div')
+    const changeContent = content =&gt; ContentDom.innerHTML = content
+    Router.route('/', () =&gt; changeContent('默认页面'))
+    Router.route('/page1', () =&gt; changeContent('page1页面'))
+    Router.route('/page2', () =&gt; changeContent('page2页面'))
+    BtnDom.addEventListener('click', Router.back.bind(Router), false)
+  </script></html> <h3 id="基于history新api（history-pushstate-popstate事件）"><a href="#基于history新api（history-pushstate-popstate事件）" aria-hidden="true" class="header-anchor">#</a> 基于History新API（history.pushState()+popState事件）</h3> <blockquote><p>HTML5中history对象上新的API，同样能实现前端的路由。通过pushState()方法或replaceState()方法可以修改url的地址，并在popstate事件中能监听地址的改变，不同的是，手动的进行pushState()并不会触发popstate事件。</p></blockquote> <p>history.pushState和 history.replaceState，这两个API都接收三个参数:</p> <ul><li>状态对象（state object），一个JavaScript对象，与用pushState()方法创建的新历史记录条目关联。无论何时用户导航到新创建的状态，会触发popstate事件，并能在事件中使用该对象。</li> <li>标题（title） ：传入一个短标题给当前state。现在大多数浏览器不支持或者会忽略此参数，最好传入null代替；</li> <li>地址（URL）：新的历史记录条目的地址。浏览器不会在调用pushState()方法后加载该地址，但之后，可能会试图加载，例如用户重启浏览器。新的URL不一定是绝对路径；如果是相对路径，它将以当前URL为基准；传入的URL与当前URL应该是同源的，否则，pushState()会抛出异常。该参数是可选的；不指定的话则为文档当前URL。</li></ul> <blockquote><p>这两个API的相同之处是都会操作浏览器的历史记录，而不会引起页面的刷新。不同之处在于，pushState会增加一条新的历史记录，而replaceState则会替换当前的历史记录。这两个api，加上state改变触发的popstate事件，提供了单页应该的另一种路由方式。</p></blockquote> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>menu<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/profile<span class="token punctuation">&quot;</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>profile<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>profile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/account<span class="token punctuation">&quot;</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>account<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>account<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>?
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>main<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>main<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token punctuation">;</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> menubox <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'menu'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> mainbox <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  menubox<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> elm <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> uri <span class="token operator">=</span> elm<span class="token punctuation">.</span>href<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> tlt <span class="token operator">=</span> elm<span class="token punctuation">.</span>title<span class="token punctuation">;</span>
+    history<span class="token punctuation">.</span><span class="token function">pushState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>path<span class="token punctuation">:</span>uri<span class="token punctuation">,</span>title<span class="token punctuation">:</span>tlt<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">,</span>uri<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    mainbox<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'current page is '</span><span class="token operator">+</span>tlt<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'popstate'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> state <span class="token operator">=</span> e<span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    mainbox<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'current page is '</span><span class="token operator">+</span>state<span class="token punctuation">.</span>title<span class="token punctuation">;</span> <span class="token comment">// 还原UI</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><code>示例</code></p><html><ul id="routerUl"><li><a href="#/">/</a></li> <li><a href="#/page3">page3</a></li> <li><a href="#/page4">page4</a></li></ul> <div class="content-div2"></div> <script>
+if (typeof RouterClass2 === 'undefined') {
+class RouterClass2 {
+constructor(path) {
+this.routes = {}      // 记录路径标识符对应的cb
+history.replaceState({ path }, null, path)
+this.routes[path] &amp;amp;&amp;amp; this.routes&lt;a href=&quot;&quot;&gt;path&lt;/a&gt;
+window.addEventListener('popstate', e =&amp;gt; {
+console.log(e, '---- e')
+const path = e.state &amp;amp;&amp;amp; e.state.path
+this.routes[path] &amp;amp;&amp;amp; this.routes&lt;a href=&quot;&quot;&gt;path&lt;/a&gt;
+})
+}
+/* 初始化 &lt;em&gt;/
+static init() {
+window.Router2 = new RouterClass2(location.pathname)
+}
+/&lt;/em&gt; 注册路由和回调 &lt;em&gt;/
+route(path, cb) {
+this.routes[path] = cb || function () {}
+}
+/&lt;/em&gt; 跳转路由，并触发路由对应回调 */
+go(path) {
+history.pushState({ path }, null, path)
+this.routes[path] &amp;amp;&amp;amp; this.routes&lt;a href=&quot;&quot;&gt;path&lt;/a&gt;
+}
+}
+window.RouterClass2 = RouterClass2
+}
+RouterClass2.init()
+const BtnDom2 = document.querySelector('#routerBack')
+const ul = document.querySelector('#routerUl')
+const ContentDom2 = document.querySelector('.content-div2')
+const changeContent2 = content =&amp;gt; ContentDom2.innerHTML = content
+Router2.route('#/', () =&amp;gt; changeContent2('默认页面'))
+Router2.route('#/page3', () =&amp;gt; changeContent2('page3页面'))
+Router2.route('#/page4', () =&amp;gt; changeContent2('page4页面'))
+ul.addEventListener('click', e =&amp;gt; {
+if (e.target.tagName === 'A') {
+e.preventDefault()
+Router2.go(e.target.getAttribute('href'))
+}
+})
+</script></html><p></p> <p><code>总结</code>:</p> <blockquote><p>两种方式对比，基于Hash的路由，兼容性更好；基于History API的路由，则更正式，可以设置与当前URL同源的任意URL，路径更直观。另外，基于Hash的路由不需要对服务器做改动，基于History API的路由需要对服务器做一些改造，配置不同的路由都返回相同的页面。</p></blockquote> <h4 id="参考"><a href="#参考" aria-hidden="true" class="header-anchor">#</a> 参考</h4> <ul><li><a href="https://github.com/kaola-fed/blog/issues/137" target="_blank" rel="noopener noreferrer">浅谈前端路由<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/History_API" target="_blank" rel="noopener noreferrer">Manipulating the browser history<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://cloud.tencent.com/developer/article/1451723" target="_blank" rel="noopener noreferrer">前端路由跳转基本原理<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/amandakelake/blog/issues/53" target="_blank" rel="noopener noreferrer">SPA路由原理<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/InterviewMap/CS-Interview-Knowledge-Map/blob/master/Framework/vue-zh.md" target="_blank" rel="noopener noreferrer">VueRouter<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/common/cookie.html" class="prev">
+          cookie 深入了解
+        </a></span> <span class="next"><a href="/design/singleton.html">
+          单例模式
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a5f12e3f.js" defer></script><script src="/assets/js/2.012767ec.js" defer></script><script src="/assets/js/15.36883b01.js" defer></script>
+  </body>
+</html>
